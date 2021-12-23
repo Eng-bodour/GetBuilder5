@@ -4,6 +4,7 @@ import 'package:getbuilder5/view/screen1.dart';
 import 'package:getbuilder5/view/screen2.dart';
 import 'package:getbuilder5/view/screen3.dart';
 import 'package:getbuilder5/view/screen4.dart';
+import 'package:getbuilder5/view/screen5.dart';
 
 class Home extends StatelessWidget {
   const Home({Key? key}) : super(key: key);
@@ -55,6 +56,11 @@ class Home extends StatelessWidget {
               const SizedBox(
                 height: 30.0,
               ),
+              TextButton(
+                  onPressed: () {
+                    Get.to(const ScreenFife());
+                  },
+                  child: const Text('Screen 5')),
             ],
           ),
         ),

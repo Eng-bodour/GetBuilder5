@@ -2,27 +2,29 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:getbuilder5/controller/sumcontroller.dart';
 
-class ScreenFour extends StatelessWidget {
-  const ScreenFour({Key? key}) : super(key: key);
+class ScreenFife extends StatelessWidget {
+  const ScreenFife({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
           backgroundColor: Colors.grey[400],
-          title: const Text('Screen 4'),
+          title: const Text('Screen 5'),
           centerTitle: true,
         ),
-        body: GetBuilder<SumController>(
-          init: SumController(),
-          builder: (controller) {
-            return Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Row(
+        body: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            GetBuilder<SumController>(
+              init: SumController(),
+              builder: (controller) {
+                // ignore: avoid_print
+                print('number1');
+                return Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    TextButton(
+                    MaterialButton(
                       child: const Text(
                         'ADD Number1:   ',
                         style: TextStyle(
@@ -40,8 +42,14 @@ class ScreenFour extends StatelessWidget {
                           fontSize: 30,
                         )),
                   ],
-                ),
-                Row(
+                );
+              },
+            ),
+            GetBuilder<SumController>(
+              builder: (controller) {
+                // ignore: avoid_print
+                print('number2');
+                return Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     TextButton(
@@ -62,20 +70,26 @@ class ScreenFour extends StatelessWidget {
                           fontSize: 30,
                         )),
                   ],
-                ),
-                const SizedBox(
-                  height: 25.0,
-                ),
-                Text(
+                );
+              },
+            ),
+            const SizedBox(
+              height: 25.0,
+            ),
+            GetBuilder<SumController>(
+              builder: (controller) {
+                // ignore: avoid_print
+                print('sum');
+                return Text(
                   'SUM =   ${controller.sum}',
                   style: const TextStyle(
                       fontSize: 30,
                       fontWeight: FontWeight.bold,
                       color: Colors.amber),
-                ),
-              ],
-            );
-          },
+                );
+              },
+            )
+          ],
         ));
   }
 }
