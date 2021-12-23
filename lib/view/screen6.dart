@@ -2,21 +2,22 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:getbuilder5/controller/sumcontroller.dart';
 
-class ScreenFife extends StatelessWidget {
-  const ScreenFife({Key? key}) : super(key: key);
+//for GETX
+class ScreenSex extends StatelessWidget {
+  const ScreenSex({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Colors.grey[400],
-        title: const Text('Screen 5'),
-        centerTitle: true,
-      ),
-      /*  body: Column(
+        appBar: AppBar(
+          backgroundColor: Colors.grey[400],
+          title: const Text('Screen 6'),
+          centerTitle: true,
+        ),
+        body: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            GetBuilder<SumController>(
+            GetX<SumController>(
               init: SumController(),
               builder: (controller) {
                 // ignore: avoid_print
@@ -34,7 +35,7 @@ class ScreenFife extends StatelessWidget {
                       ),
                       onPressed: () {
                         controller.incrementNum1();
-                        controller.sumNumber();
+                        controller.result;
                       },
                     ),
                     Text('${controller.number1}',
@@ -45,7 +46,7 @@ class ScreenFife extends StatelessWidget {
                 );
               },
             ),
-            GetBuilder<SumController>(
+            GetX<SumController>(
               builder: (controller) {
                 // ignore: avoid_print
                 print('number2');
@@ -62,7 +63,7 @@ class ScreenFife extends StatelessWidget {
                       ),
                       onPressed: () {
                         controller.incrementNum2();
-                        controller.sumNumber();
+                        controller.result;
                       },
                     ),
                     Text('${controller.number2}',
@@ -76,12 +77,12 @@ class ScreenFife extends StatelessWidget {
             const SizedBox(
               height: 25.0,
             ),
-            GetBuilder<SumController>(
+            GetX<SumController>(
               builder: (controller) {
                 // ignore: avoid_print
                 print('sum');
                 return Text(
-                  'SUM =   ${controller.sum}',
+                  'SUM =   ${controller.result}',
                   style: const TextStyle(
                       fontSize: 30,
                       fontWeight: FontWeight.bold,
@@ -90,8 +91,6 @@ class ScreenFife extends StatelessWidget {
               },
             )
           ],
-        )
-        */
-    );
+        ));
   }
 }

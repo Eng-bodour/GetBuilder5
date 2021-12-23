@@ -8,12 +8,12 @@ class ScreenFour extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(
-          backgroundColor: Colors.grey[400],
-          title: const Text('Screen 4'),
-          centerTitle: true,
-        ),
-        body: GetBuilder<SumController>(
+      appBar: AppBar(
+        backgroundColor: Colors.grey[400],
+        title: const Text('Screen 4'),
+        centerTitle: true,
+      ),
+      /*  body: GetBuilder<SumController>(
           init: SumController(),
           builder: (controller) {
             return Column(
@@ -76,6 +76,9 @@ class ScreenFour extends StatelessWidget {
               ],
             );
           },
-        ));
+        )
+
+        */
+    );
   }
 }
